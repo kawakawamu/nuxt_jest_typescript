@@ -7,4 +7,3 @@ describe('HelloButton.vue', () => {
     expect(wrapper.html()).toMatchSnapshot()
   })
 })
-s
