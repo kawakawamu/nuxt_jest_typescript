@@ -1,9 +1,10 @@
 import { mount } from '@vue/test-utils'
-import Button from '@/components/HelloButton.vue'
+import HogeButton from '@/components/HelloButton.vue'
 
-describe('HelloButton.vue', () => {
-  it('snapshot', () => {
-    const wrapper = mount(Button)
-    expect(wrapper.html()).toMatchSnapshot()
+describe('HogeButton', () => {
+  const wrapper = mount(HogeButton)
+
+  it('renders hoge', () => {
+    expect(wrapper.html()).toContain('<p>hoge</p>')
   })
 })
