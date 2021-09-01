@@ -3,6 +3,7 @@
     <v-col cols="12" sm="8" md="6">
       <v-card class="logo py-4 d-flex justify-center">
         <NuxtLogo />
+        <HelloInput />
       </v-card>
       <v-card>
         <v-card-title class="headline">
@@ -78,3 +79,14 @@
     </v-col>
   </v-row>
 </template>
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
+import HelloInput from '@/components/HelloInput.vue'
+
+@Component({
+  components: {
+    HelloInput,
+  },
+})
+export default class MyInput extends Vue {}
+</script>

@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import HogeButton from '@/components/HelloButton.vue'
+import HogeButton from '@/components/MyComponent.vue'
 
 describe('HogeButton', () => {
   const wrapper = mount(HogeButton)
