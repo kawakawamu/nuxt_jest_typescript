@@ -61,4 +61,9 @@ interface ErrorInfoes {
 interface ErrorResponse {
   [key: string]: string[]
 }
+
+@Component
+export default class FormVue extends Vue {
+  @Prop({ type: Number, required: false }) initPriority!: number
+}
 </script>
