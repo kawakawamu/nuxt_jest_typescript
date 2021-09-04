@@ -65,5 +65,11 @@ interface ErrorResponse {
 @Component
 export default class FormVue extends Vue {
   @Prop({ type: Number, required: false }) initPriority!: number
+  @Prop({ type: String, required: false }) initTodo!: string
+  @Prop({ type: String, required: false }) paramld?: string
+  selectedPriority?: number | null = null
+  labelList: string[] = ['todo', 'priority']
+  todo?: string = ''
+  errors: ErrorInfoes = {}
 }
 </script>
