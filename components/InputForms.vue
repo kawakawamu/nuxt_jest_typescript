@@ -55,7 +55,7 @@ interface ErrorInfo {
 }
 
 interface ErrorInfoes {
-  [key: string]: string[]
+  [key: string]: ErrorInfo
 }
 
 interface ErrorResponse {
@@ -70,6 +70,26 @@ export default class FormVue extends Vue {
   selectedPriority?: number | null = null
   labelList: string[] = ['todo', 'priority']
   todo?: string = ''
-  errors: ErrorInfoes = {}
+  errors: ErrorInfoes = {
+    todo: {
+      flag: false,
+      count: 0,
+      message: [],
+    },
+    priority: {
+      flag: false,
+      count: 0,
+      message: [],
+    },
+  }
+
+  priority: Priority[] = [
+    { label: '低', value: 0 },
+    { label: '中', value: 1 },
+    { label: '高', value: 2 },
+  ]
+
+  @Emit()
+  public initTodoList() {}
 }
 </script>
