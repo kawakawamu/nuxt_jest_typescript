@@ -91,5 +91,34 @@ export default class FormVue extends Vue {
 
   @Emit()
   public initTodoList() {}
+
+  submit(): void {
+    this.initErrorInfo()
+    if (this.paramId) {
+      this.putSubmit(this.paramld)
+    } else {
+      this.postSubmit()
+    }
+  }
+
+  postSubmit(): void {
+    try {
+      axios
+        .post(process.env.API + '/tasks/', {
+          todo: this.todo,
+          priority: this.selectedPriority,
+        })
+        .then(() => {
+          this.initFormValue()
+          this.initTodoList()
+        })
+        .catch((error) => {
+          const errorList = error.response.data
+          this.displayError(errorList)
+        })
+    } catch (e) {
+      return e
+    }
+  }
 }
 </script>
