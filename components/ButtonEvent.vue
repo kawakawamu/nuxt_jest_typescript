@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p data-cy="countCheck">Count is: {{ count }}</p>
+    <p data-cy="countCheck" class="count_paragh">Count is: {{ count }}</p>
     <button @click="increment">増えます</button>
   </div>
 </template>
