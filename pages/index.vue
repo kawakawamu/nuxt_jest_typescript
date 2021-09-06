@@ -1,18 +1,18 @@
 <template>
   <div>
+    <Header />
     <EventTarget />
-    <InputForms />
   </div>
 </template>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import EventTarget from '@/components/TargetEvent.vue'
-import InputForms from '@/components/InputForms.vue'
+import Header from '@/components/Header.vue'
+import EventTarget from '@/components/ButtonEvent.vue'
 
 @Component({
   components: {
+    Header,
     EventTarget,
-    InputForms,
   },
 })
 export default class MyInput extends Vue {}
