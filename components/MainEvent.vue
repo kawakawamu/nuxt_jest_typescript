@@ -1,8 +1,10 @@
 <template>
-  <div>
-    <p data-cy="countCheck" class="count_paragh">Count is: {{ count }}</p>
-    <button @click="increment">増えます</button>
-  </div>
+  <main class="flex flex-wrap h-screen items-center">
+    <div>
+      <p data-cy="countCheck" class="count_paragh">Count is: {{ count }}</p>
+      <button @click="increment">増えます</button>
+    </div>
+  </main>
 </template>
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
