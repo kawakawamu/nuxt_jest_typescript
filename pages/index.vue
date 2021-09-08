@@ -1,7 +1,9 @@
 <template>
   <div>
     <Header />
-    <Main />
+    <div class="flex justify-center">
+      <Main />
+    </div>
   </div>
 </template>
 <script lang="ts">
