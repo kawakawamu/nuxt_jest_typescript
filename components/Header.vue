@@ -1,7 +1,7 @@
 <template>
   <div>
     <header class="py-6 bg-greenC-500 flex justify-between shadow-md">
-      <div class="px-5">Nuxt.jsでjest</div>
+      <div class="px-5 header__title">Nuxt.jsでjest</div>
       <!-- click Open menu -->
       <div class="px-5">
         <button class="header__btn" @click="ismenuOpen = !ismenuOpen">
