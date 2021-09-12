@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import App from '@/components/ButtonEvent.vue'
+import App from '~/components/MainEvent.vue'
 
 describe('App', () => {
   it('click button count up', async () => {
