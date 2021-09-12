@@ -13,13 +13,16 @@
     </header>
     <div>
       <transition name="menu">
-        <div class="menu" :class="ismenuOpen ? 'block' : 'hidden'">
+        <div
+          class="menu_title"
+          :class="ismenuOpen ? 'show__menu' : 'hidde__nmenu'"
+        >
           <ul>
-            <li><a href="#">項目1</a></li>
-            <li><a href="#">項目2</a></li>
-            <li><a href="#">項目3</a></li>
-            <li><a href="#">項目4</a></li>
-            <li><a href="#">項目5</a></li>
+            <li class="menu__code1"><a href="#">項目1</a></li>
+            <li class="menu__code2"><a href="#">項目2</a></li>
+            <li class="menu__code3"><a href="#">項目3</a></li>
+            <li class="menu__code4"><a href="#">項目4</a></li>
+            <li class="menu__code5"><a href="#">項目5</a></li>
           </ul>
         </div>
       </transition>
