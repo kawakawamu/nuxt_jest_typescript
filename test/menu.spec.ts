@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils'
 import Header from '@/components/Header.vue'
 
 describe('Header', () => {
-  it('メニュー画面が出てくるか', () => {
+  it('メニュー画面が消えてないか', () => {
     const wrapper = mount(Header)
     // クラス名を取得
     const title = wrapper.find('.menu__code2')
@@ -18,9 +18,9 @@ describe('Header', () => {
     await wrapper.get('.header__btn').trigger('click')
 
     // クラス名で取得する
-    const contain = wrapper.find('.show__menu')
+    const contain = wrapper.find('.block')
 
-    // クラス名show__menuがあるか
+    // クラス名show__menuに切り替わっているか
     expect(contain.exists()).toBe(true)
   })
 })

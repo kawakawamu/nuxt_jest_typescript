@@ -13,10 +13,7 @@
     </header>
     <div>
       <transition name="menu">
-        <div
-          class="menu_title"
-          :class="ismenuOpen ? 'show__menu' : 'hidde__nmenu'"
-        >
+        <div class="menu" :class="ismenuOpen ? 'block' : 'hidden'">
           <ul>
             <li class="menu__code1"><a href="#">項目1</a></li>
             <li class="menu__code2"><a href="#">項目2</a></li>
