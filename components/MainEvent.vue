@@ -4,12 +4,20 @@
       <p data-cy="countCheck" class="count_paragh">Count is: {{ count }}</p>
       <button @click="increment">増えるボタン</button>
     </div>
+    <div class="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20">
+      <SelectBox />
+    </div>
   </main>
 </template>
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
+import SelectBox from '~/components/SelectBox.vue'
 
-@Component
+@Component({
+  components: {
+    SelectBox
+  }
+})
 export default class Index extends Vue {
   count: number = 0
 
