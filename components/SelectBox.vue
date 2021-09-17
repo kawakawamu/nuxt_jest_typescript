@@ -1,15 +1,24 @@
 <template>
   <div>
-    <div>セレクトボックス</div>
-    <select v-model="selectedKey" v-on:change="selected">
-      <option v-for="(value, key) in food_items" :key="key">{{ key }}</option>
-    </select>
+    <div class="my-3">セレクトボックス</div>
+    <div class="flex">
+      <select
+        v-model="selectedKey"
+        v-on:change="selected"
+        class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 mr-5"
+      >
+        <option v-for="(value, key) in food_items" :key="key">{{ key }}</option>
+      </select>
 
-    <select v-if="SelectedItem">
-      <option v-for="(item, key) in SelectedItem" :key="key">
-        {{ item.food_name }}
-      </option>
-    </select>
+      <select
+        v-if="SelectedItem"
+        class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+      >
+        <option v-for="(item, key) in SelectedItem" :key="key">
+          {{ item.food_name }}
+        </option>
+      </select>
+    </div>
   </div>
 </template>
 <script lang="ts">
