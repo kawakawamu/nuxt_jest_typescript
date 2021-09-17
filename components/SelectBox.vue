@@ -27,7 +27,7 @@ interface FoodItems {
 @Component
 export default class SelectBox extends Vue {
   selectedKey: string = ''
-  SelectedItem: any = ''
+  SelectedItem: FoodItem[] = []
 
   // 二次元配列
   food_items: FoodItems = {
@@ -58,7 +58,7 @@ export default class SelectBox extends Vue {
   }
 
   selected() {
-    // this.selectedItem = this.food_items[this.selectedKey]
+    this.SelectedItem = this.food_items[this.selectedKey]
   }
 }
 </script>
