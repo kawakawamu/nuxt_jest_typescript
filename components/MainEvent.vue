@@ -1,10 +1,21 @@
 <template>
   <main class="flex justify-center h-screen items-center w-2/3">
-    <div class="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20">
-      <p data-cy="countCheck" class="count_paragh">Count is: {{ count }}</p>
-      <button @click="increment">増えるボタン</button>
+    <div
+      class="text-center h-32 w-96 max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20 mr-24"
+    >
+      <p data-cy="countCheck" class="count_paragh mt-3">
+        Count is: {{ currentcount }}
+      </p>
+      <button
+        @click="increment"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-5"
+      >
+        増えるボタン
+      </button>
     </div>
-    <div class="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20">
+    <div
+      class="h-32 w-96 max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20"
+    >
       <SelectBox />
     </div>
   </main>
@@ -12,17 +23,19 @@
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
 import SelectBox from '~/components/SelectBox.vue'
+import Countup from '~/components/Countup.vue'
 
 @Component({
   components: {
-    SelectBox
+    SelectBox,
+    Countup
   }
 })
-export default class Index extends Vue {
-  count: number = 0
+export default class MainIndex extends Vue {
+  currentcount: number = 0
 
   increment() {
-    this.count += 1
+    this.currentcount += 1
   }
 }
 </script>
