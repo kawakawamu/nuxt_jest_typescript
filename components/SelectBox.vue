@@ -4,6 +4,12 @@
     <select v-model="selectedKey" v-on:change="selected">
       <option v-for="(value, key) in food_items" :key="key">{{ key }}</option>
     </select>
+
+    <select v-if="SelectedItem">
+      <option v-for="(item, key) in SelectedItem" :key="key">
+        {{ item.food_name }}
+      </option>
+    </select>
   </div>
 </template>
 <script lang="ts">
@@ -21,7 +27,7 @@ interface FoodItems {
 @Component
 export default class SelectBox extends Vue {
   selectedKey: string = ''
-  selectedItem: [] = []
+  SelectedItem: any = ''
 
   // 二次元配列
   food_items: FoodItems = {
