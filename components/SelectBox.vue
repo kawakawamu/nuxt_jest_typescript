@@ -40,7 +40,7 @@ export default class SelectBox extends Vue {
 
   // 二次元配列
   food_items: FoodItems = {
-    fruit: [
+    フルーツ: [
       {
         id: 0,
         food_name: '苺'
@@ -50,7 +50,7 @@ export default class SelectBox extends Vue {
         food_name: '林檎'
       }
     ],
-    vegetable: [
+    やさい: [
       {
         id: 2,
         food_name: '白菜'
