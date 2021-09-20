@@ -1,9 +1,9 @@
 <template>
   <div>
     <p data-cy="countCheck" class="count_paragh">
-      Count is: {{ currentcount }}
+      カウント数は {{ currentcount }} です
     </p>
-    <button @click="increment">増えるボタン</button>
+    <button @click="increment">カウントボタン</button>
   </div>
 </template>
 <script lang="ts">
