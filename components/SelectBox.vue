@@ -5,6 +5,7 @@
       <select
         v-model="selectedKey"
         v-on:change="selected"
+        data-cy="select"
         class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 mr-5"
       >
         <option v-for="(value, key) in food_items" :key="key">{{ key }}</option>
@@ -12,6 +13,7 @@
 
       <select
         v-if="SelectedItem"
+        data-cy="detailselect"
         class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
       >
         <option v-for="(item, key) in SelectedItem" :key="key">

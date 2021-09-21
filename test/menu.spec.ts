@@ -20,7 +20,14 @@ describe('Header', () => {
     // クラス名で取得する
     const contain = wrapper.find('.block')
 
-    // クラス名show__menuに切り替わっているか
+    // クラス名.block切り替わっているか
     expect(contain.exists()).toBe(true)
+
+    // もう一度押す（閉じる)
+    await wrapper.get('.header__btn').trigger('click')
+    const Closecontain = wrapper.find('.block')
+
+    // クラス名.blockは消えているか
+    expect(Closecontain.exists()).toBe(false)
   })
 })
