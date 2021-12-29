@@ -9,9 +9,6 @@ describe('App', () => {
     await wrapper.get('button').trigger('click')
     await wrapper.get('button').trigger('click')
 
-    //findからのtextでタグの中身をとってくる
-    // const contain = wrapper.find('[data-cy="countCheck"]').text()
-
     //クラスでも取得できる
     const contain = wrapper.find('.count_paragh').text()
 
